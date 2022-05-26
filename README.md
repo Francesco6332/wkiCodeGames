@@ -29,6 +29,15 @@ il 25/05/22 abbiamo analizzato e visionato i seguenti strumenti:
 
 ######  4. Visual Studio 2019/2022:
 - Applicazione standard MVC, utilizzo di AngularJS per il Front-End.
-  - ***LINK TO ANGULAR:*** https://angularjs.org/
-  - ***LINK TO MICROSOFT MVC:*** https://docs.microsoft.com/it-it/aspnet/mvc/overview/getting-started/introduction/getting-started
+  - **Docs:**
+      - ***LINK TO ANGULAR:*** [https://angularjs.org/](https://www.html.it/guide/guida-angularjs-2/)
+      - ***LINK TO MICROSOFT MVC:*** https://docs.microsoft.com/it-it/aspnet/mvc/overview/getting-started/introduction/getting-started
+  
+  - ***Conclusioni:*** Opzione migliore per lo sviluppo in base alle competenze possedute. 
+
+## Requisiti caricamento repository GIT:
+
+###### 1. Preparare la Solution
+- Provare ad eseguire qualche esperimento;
+  -
             
