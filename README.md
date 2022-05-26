@@ -32,12 +32,12 @@ il 25/05/22 abbiamo analizzato e visionato i seguenti strumenti:
   - **Docs:**
       - ***LINK TO ANGULAR:*** [https://angularjs.org/](https://www.html.it/guide/guida-angularjs-2/)
       - ***LINK TO MICROSOFT MVC:*** https://docs.microsoft.com/it-it/aspnet/mvc/overview/getting-started/introduction/getting-started
-  
+      - ***LINK TO TUTORIAL MVC ANGULARJS AND C#:*** https://docs.microsoft.com/it-it/visualstudio/javascript/tutorial-asp-net-core-with-angular?view=vs-2022
   - ***Conclusioni:*** Opzione migliore per lo sviluppo in base alle competenze possedute. 
 
 ## Requisiti caricamento repository GIT:
 
 ###### 1. Preparare la Solution
 - Provare ad eseguire qualche esperimento;
-  -
+  - Strutturare il progetto;
             
