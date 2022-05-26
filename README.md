@@ -10,8 +10,6 @@ _Crea il tuo team_ e **sfida** i giocatori di altri studi!!.
 
 ## L'analisi degli strumenti:
 
-il 25/05/22 abbiamo analizzato e visionato i seguenti strumenti:
-
 ######  1. Flutter:
 - Framework open-source di Google per creare applicazioni multi-platform;
   - ***LINK TO FLUTTER:*** https://flutter.dev/
