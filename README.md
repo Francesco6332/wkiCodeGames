@@ -16,7 +16,8 @@ il 25/05/22 abbiamo analizzato e visionato i seguenti strumenti:
                 - *LINK TO FLUTTER:* https://flutter.dev/
   
 ######  2. Adobe XD:
-            - Software che permette la creazione di prototipi wireframe per la UI/UX design, fornendo le risorse necessarie per lo sviluppo ai DEV.
+            - Software che permette la creazione di prototipi wireframe per la UI/UX design, 
+              fornendo le risorse necessarie per lo sviluppo ai DEV.
                 - *LINK TO ADOBE XD:* https://www.adobe.com/products/xd.html
                 
 ######  3. Eaas API:
