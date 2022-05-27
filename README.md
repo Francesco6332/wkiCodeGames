@@ -38,4 +38,5 @@ _Crea il tuo team_ e **sfida** i giocatori di altri studi!!.
 ###### 1. Preparare la Solution
 - Provare ad eseguire qualche esperimento;
   - Strutturare il progetto;
+  - Creare branch su git, necessari allo sviluppo (front-end/back-end/angular ecc...);
             
