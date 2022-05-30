@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marco.gentilozzi\\source\\repos\\GamesTest\\AngularBackend\\AngularBackend.csproj": {}
+    "C:\\Users\\marco.gentilozzi\\source\\repos\\wkiCodeGames\\AngularBackend\\AngularBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marco.gentilozzi\\source\\repos\\GamesTest\\AngularBackend\\AngularBackend.csproj": {
+    "C:\\Users\\marco.gentilozzi\\source\\repos\\wkiCodeGames\\AngularBackend\\AngularBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marco.gentilozzi\\source\\repos\\GamesTest\\AngularBackend\\AngularBackend.csproj",
+        "projectUniqueName": "C:\\Users\\marco.gentilozzi\\source\\repos\\wkiCodeGames\\AngularBackend\\AngularBackend.csproj",
         "projectName": "AngularBackend",
-        "projectPath": "C:\\Users\\marco.gentilozzi\\source\\repos\\GamesTest\\AngularBackend\\AngularBackend.csproj",
+        "projectPath": "C:\\Users\\marco.gentilozzi\\source\\repos\\wkiCodeGames\\AngularBackend\\AngularBackend.csproj",
         "packagesPath": "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marco.gentilozzi\\source\\repos\\GamesTest\\AngularBackend\\obj\\",
+        "outputPath": "C:\\Users\\marco.gentilozzi\\source\\repos\\wkiCodeGames\\AngularBackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marco.gentilozzi\\AppData\\Roaming\\NuGet\\NuGet.Config",
