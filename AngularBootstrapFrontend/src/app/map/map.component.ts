@@ -39,11 +39,11 @@ export class MapComponent implements OnInit, AfterViewInit {
     var roan  = L.latLng([-235, 410]);
     var gondor  = L.latLng([-285, 410]);
     
-    L.marker(shire).addTo(this.map).bindPopup('The Shire');
+    L.marker(shire).on('click', (clickEvent) => openPopup('Shire')).addTo(this.map).bindPopup('The Shire');
     L.marker(doom).addTo(this.map).bindPopup('Monte Fato');
     L.marker(roan).addTo(this.map).bindPopup('Roan');
     L.marker(gondor).addTo(this.map).bindPopup('Gondot');
-    
+
     // var travel = L.polyline([sol, deneb]).addTo(this.map);
 
 
@@ -72,4 +72,10 @@ export class MapComponent implements OnInit, AfterViewInit {
   }
   
 
+  
 }
+
+function openPopup(place: string) {
+  alert("Welcome to " + place);
+}
+
