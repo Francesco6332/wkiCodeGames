@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as L from 'leaflet';
 
 @Component({
@@ -39,7 +40,7 @@ export class MapComponent implements OnInit, AfterViewInit {
     var roan  = L.latLng([-235, 410]);
     var gondor  = L.latLng([-285, 410]);
     
-    L.marker(shire).on('click', (clickEvent) => openPopup('Shire')).addTo(this.map).bindPopup('The Shire');
+    L.marker(shire).on('click', (clickEvent) => this.gototable()).addTo(this.map).bindPopup('The Shire');
     L.marker(doom).addTo(this.map).bindPopup('Monte Fato');
     L.marker(roan).addTo(this.map).bindPopup('Roan');
     L.marker(gondor).addTo(this.map).bindPopup('Gondot');
@@ -62,7 +63,7 @@ export class MapComponent implements OnInit, AfterViewInit {
     // tiles.addTo(this.map);
   }
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngAfterViewInit(): void {
     this.initMap();
@@ -72,10 +73,10 @@ export class MapComponent implements OnInit, AfterViewInit {
   }
   
 
+  gototable() {
+    this.router.navigate([ '/table' ]);
+  }
   
 }
 
-function openPopup(place: string) {
-  alert("Welcome to " + place);
-}
 
