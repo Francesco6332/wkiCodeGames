@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { DataService } from './data.service'
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-rest-table',
@@ -9,8 +11,9 @@ import { HttpClient } from '@angular/common/http';
 export class RestTableComponent implements OnInit {
   public forecasts?: WeatherForecast[];
   public score?: Number;
+  public score$: Observable<Number>;
 
-  constructor(http: HttpClient) {
+  constructor(http: HttpClient, public dataService: DataService) {
     http.get<WeatherForecast[]>('/weatherforecast').subscribe(result => {
       this.forecasts = result;
     }, error => console.error(error));
@@ -18,6 +21,9 @@ export class RestTableComponent implements OnInit {
     http.get<Number>('/getScore').subscribe(result => {
       this.score = result;
     }, error => console.error(error));
+
+    this.score$ = dataService.getCyclicScore();
+
   }
 
 

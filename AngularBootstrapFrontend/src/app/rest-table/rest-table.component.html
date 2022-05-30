@@ -21,7 +21,8 @@
     </table>
   </div>
 
-  
+  <div *ngIf="score$ | async as score">
     <h1>Your Score is {{score}}</h1>
+  </div>
   
 </div>

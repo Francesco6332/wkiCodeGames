@@ -14,6 +14,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { HeaderComponent } from './header/header.component';
 import { MapComponent } from './map/map.component';
 import { RestTableComponent } from './rest-table/rest-table.component';
+import { DataService } from './rest-table/data.service';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { RestTableComponent } from './rest-table/rest-table.component';
     MatButtonModule,
     MatTooltipModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
