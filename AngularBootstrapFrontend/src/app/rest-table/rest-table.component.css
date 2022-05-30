@@ -1,0 +1,17 @@
+.component{    
+  position: absolute;
+  top: 1000px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  margin: 30px;
+}
+
+.demo-table {
+    width: 50%;
+  }
+  
+th.mat-sort-header-sorted {
+    color: black;
+  }
