@@ -20,6 +20,31 @@ export class AppComponent {
     }, error => console.error(error));
   }
 
+  // Tabella di Angular Material
+  columns = [
+    {
+      columnDef: 'date',
+      header: 'Date',
+      cell: (element: WeatherForecast) => `${element.date}`,
+    },
+    {
+      columnDef: 'tempC',
+      header: 'Temp. (C)',
+      cell: (element: WeatherForecast) => `${element.temperatureC}`,
+    },
+    {
+      columnDef: 'tempF',
+      header: 'Temp. (F)',
+      cell: (element: WeatherForecast) => `${element.temperatureF}`,
+    },
+    {
+      columnDef: 'summary',
+      header: 'Summary',
+      cell: (element: WeatherForecast) => `${element.summary}`,
+    },
+  ];
+  displayedColumns = this.columns.map(c => c.columnDef);
+
   title = 'AngularBootstrapFrontend';
 }
 

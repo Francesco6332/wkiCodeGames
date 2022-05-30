@@ -4,27 +4,20 @@
 
 <p *ngIf="!forecasts"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
 
-<div class="container">
-  <div class="row justify-content-md-start">
-    <table *ngIf="forecasts" class="table">
-        <thead>
-            <tr>
-                <th scope="col">Date</th>
-                <th scope="col">Temp. (C)</th>
-                <th scope="col">Temp. (F)</th>
-                <th scope="col">Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let forecast of forecasts">
-                <td scope="row">{{ forecast.date }}</td>
-                <td>{{ forecast.temperatureC }}</td>
-                <td>{{ forecast.temperatureF }}</td>
-                <td>{{ forecast.summary }}</td>
-            </tr>
-        </tbody>
-    </table>
-  </div>
+<div style="margin: 25px">
+  <table *ngIf="forecasts" mat-table [dataSource]="forecasts" class="mat-elevation-z8 demo-table">
+    <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef">
+      <th mat-header-cell *matHeaderCellDef >
+        {{column.header}}
+      </th>
+      <td mat-cell *matCellDef="let row">
+        {{column.cell(row)}}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
 </div>
 
 <h1>Your Score is {{score}}</h1>
