@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatTableModule} from '@angular/material/table';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatTooltipModule} from '@angular/material/tooltip';
+//Angular Material
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 import { HeaderComponent } from './header/header.component';
 import { MapComponent } from './map/map.component';
@@ -30,7 +32,8 @@ import { DataService } from './rest-table/data.service';
     MatTableModule,
     MatIconModule,
     MatButtonModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatProgressBarModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

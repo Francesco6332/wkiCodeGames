@@ -2,6 +2,5 @@
 .vs/
 
 # AngularBackend
-/AngularBackend/bin/
-/AngularBackend/obj/
-.vs/ProjectEvaluation/gamestest.projects.v2
+AngularBackend/bin/
+AngularBackend/obj/

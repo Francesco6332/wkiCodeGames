@@ -17,3 +17,18 @@
 #map {
   height: 100%;
 }
+
+mat-progress-bar {
+  display: block;
+  position: relative;
+  width: 82%;
+  height: 10px;
+  margin: 20px 0px 10px 0px;
+}
+
+.resetButton{ 
+  display: flex;
+  justify-content: end;
+  margin: 20px 0px 10px 0px;
+  width: 82%;
+}

@@ -1,5 +1,18 @@
 <div class="map-container">
     <div class="map-frame">
         <div id="map"></div>
+    </div>        
+    <div>
+        <mat-progress-bar
+        [color]="'Primary'"
+        [mode]="'determinate'"
+        [value]="score"></mat-progress-bar>
+    </div>    
+    <h3>Your progress is {{score}}/100</h3>    
+    <div class="resetButton">
+        <button mat-raised-button color="primary" (click)="resetScore()">Reset Score</button>
     </div>
+
+
+    
 </div>
