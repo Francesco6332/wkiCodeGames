@@ -1,8 +1,26 @@
+using Microsoft.Net.Http.Headers;
+
+// TODO, da configurare la sicurezza
+var allowAllOrigins = "allOrigins";
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Abilito le origini note
+builder.Services.AddCors(options =>
+{
+	options.AddPolicy(name: allowAllOrigins,
+							builder =>
+							{
+								builder
+								.AllowAnyOrigin()
+								.AllowAnyMethod()
+								.AllowAnyHeader();
+							});
+});
 
+// Add services to the container.
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -21,5 +39,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+// Use CORS
+app.UseCors(allowAllOrigins);
 
 app.Run();

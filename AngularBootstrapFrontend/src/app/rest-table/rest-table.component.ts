@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DataService } from './data.service'
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-rest-table',
@@ -14,11 +15,11 @@ export class RestTableComponent implements OnInit {
   public score$: Observable<Number>;
 
   constructor(http: HttpClient, public dataService: DataService) {
-    http.get<WeatherForecast[]>('/weatherforecast').subscribe(result => {
+    http.get<WeatherForecast[]>(`${environment.api_url}/weatherforecast`).subscribe(result => {
       this.forecasts = result;
     }, error => console.error(error));
 
-    http.get<Number>('/getScore').subscribe(result => {
+    http.get<Number>(`${environment.api_url}/getScore`).subscribe(result => {
       this.score = result;
     }, error => console.error(error));
 
@@ -55,7 +56,6 @@ export class RestTableComponent implements OnInit {
   ];
   displayedColumns = this.columns.map(c => c.columnDef);
 
-  title = 'AngularBootstrapFrontend';
 }
 
 interface WeatherForecast {

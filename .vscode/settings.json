@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/f4ea5362-782f-404b-8bf9-99d6c24a3099/microsoft.web/sites/subscriptions/f4ea5362-782f-404b-8bf9-99d6c24a3099/resourceGroups/testDeployApp/providers/Microsoft.Web/sites/my-angular-frontend",
+    "appService.deploySubpath": "AngularBootstrapFrontend\\dist\\angular-bootstrap-frontend"
+}

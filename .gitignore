@@ -1,0 +1,7 @@
+# general
+.vs/
+
+# AngularBackend
+/AngularBackend/bin/
+/AngularBackend/obj/
+.vs/ProjectEvaluation/gamestest.projects.v2

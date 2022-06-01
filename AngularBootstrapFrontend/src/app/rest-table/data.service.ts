@@ -2,6 +2,7 @@ import { Injectable, OnDestroy } from '@angular/core';
 import { Observable, timer, Subscription, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { switchMap, tap, share, retry, takeUntil } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class DataService implements OnDestroy {
@@ -12,7 +13,7 @@ export class DataService implements OnDestroy {
 
   constructor(private http: HttpClient) {    
     this.score$ = timer(1, 3000).pipe(
-      switchMap(() => http.get<Number>('/getScore')),
+      switchMap(() => http.get<Number>(`${environment.api_url}/getScore`)),
       retry()
     );
   }
