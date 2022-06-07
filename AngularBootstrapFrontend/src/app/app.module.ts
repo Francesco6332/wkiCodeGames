@@ -17,6 +17,7 @@ import { HeaderComponent } from './header/header.component';
 import { MapComponent } from './map/map.component';
 import { RestTableComponent } from './rest-table/rest-table.component';
 import { DataService } from './rest-table/data.service';
+import { WebcamSchreenshotComponent } from './webcam-schreenshot/webcam-schreenshot.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DataService } from './rest-table/data.service';
     AppComponent,
     HeaderComponent,
     MapComponent,
-    RestTableComponent
+    RestTableComponent,
+    WebcamSchreenshotComponent
   ],
   imports: [
     AppRoutingModule,

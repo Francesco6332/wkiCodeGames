@@ -52,3 +52,9 @@ C:\Users\marco.gentilozzi\source\repos\wkiCodeGames\AngularBackend\obj\Debug\net
 C:\Users\marco.gentilozzi\source\repos\wkiCodeGames\AngularBackend\obj\Debug\net6.0\AngularBackend.pdb
 C:\Users\marco.gentilozzi\source\repos\wkiCodeGames\AngularBackend\obj\Debug\net6.0\AngularBackend.genruntimeconfig.cache
 C:\Users\marco.gentilozzi\source\repos\wkiCodeGames\AngularBackend\obj\Debug\net6.0\ref\AngularBackend.dll
+C:\Users\marco.gentilozzi\source\repos\wkiCodeGames\AngularBackend\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\marco.gentilozzi\source\repos\wkiCodeGames\AngularBackend\bin\Debug\net6.0\Plugin.Media.dll
+C:\Users\marco.gentilozzi\source\repos\wkiCodeGames\AngularBackend\bin\Debug\net6.0\Xamarin.Essentials.dll
+C:\Users\marco.gentilozzi\source\repos\wkiCodeGames\AngularBackend\bin\Debug\net6.0\Microsoft.Azure.CognitiveServices.Vision.Face.dll
+C:\Users\marco.gentilozzi\source\repos\wkiCodeGames\AngularBackend\bin\Debug\net6.0\Microsoft.Rest.ClientRuntime.dll
+C:\Users\marco.gentilozzi\source\repos\wkiCodeGames\AngularBackend\bin\Debug\net6.0\Microsoft.Rest.ClientRuntime.Azure.dll

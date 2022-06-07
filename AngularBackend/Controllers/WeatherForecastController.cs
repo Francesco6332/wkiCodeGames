@@ -1,5 +1,5 @@
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
 
 namespace AngularBackend.Controllers
 {
@@ -36,5 +36,51 @@ namespace AngularBackend.Controllers
 		{
 			return Random.Shared.Next(0, 100);
 		}
+
+
+		[HttpPost("/uploadImage"), DisableRequestSizeLimit]
+		public async Task<IActionResult> UploadImage()
+		{
+			try
+			{
+				// Salvo il file localmente
+				var formCollection = await Request.ReadFormAsync();
+				var file = formCollection.Files.First();
+				var folderName = Path.Combine("Resources", "Images");
+				var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
+				var fullPath = "";
+				if (file.Length > 0)
+				{
+					var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+					fullPath = Path.Combine(pathToSave, fileName);
+					var dbPath = Path.Combine(folderName, fileName);
+					using (var stream = new FileStream(fullPath, FileMode.Create))
+					{
+						file.CopyTo(stream);
+					}
+
+					//var result = new String[] { "Daje", "Forte" };
+
+					//return Ok(result);
+				}
+				else
+				{
+					return BadRequest();
+				}
+
+				// Lo analizzo con gli Azure Cognitive Services
+
+				var controller = new EmotionsController();
+				var res = await controller.GetEmotionsFromFile(fullPath);
+
+				return Ok(res);
+
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, $"Internal server error: {ex}");
+			}
+		}
+
 	}
 }

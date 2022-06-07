@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Http.Features;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Net.Http.Headers;
 
 // TODO, da configurare la sicurezza
@@ -16,6 +18,14 @@ builder.Services.AddCors(options =>
 								.AllowAnyMethod()
 								.AllowAnyHeader();
 							});
+});
+
+// Evita l'errore MultiPartBodyLength quando carico le immagini
+builder.Services.Configure<FormOptions>(o =>
+{
+	o.ValueLengthLimit = int.MaxValue;
+	o.MultipartBodyLengthLimit = int.MaxValue;
+	o.MemoryBufferThreshold = int.MaxValue;
 });
 
 // Add services to the container.
@@ -42,5 +52,15 @@ app.MapControllers();
 
 // Use CORS
 app.UseCors(allowAllOrigins);
+
+// Permette di salvare i dati nella tabella resources
+app.UseHttpsRedirection();
+
+app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions()
+{
+	FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
+	RequestPath = new PathString("/Resources")
+});
 
 app.Run();
