@@ -23,7 +23,7 @@ namespace WKGameAPI.Models
 		{
 			AvatarsList.Add(new Avatar() { AvatarId = 1, Nickname = "Astroman" });
 			AvatarsList.Add(new Avatar() { AvatarId = 2, Nickname = "Sunny" });
-			AvatarsList.Add(new Avatar() { AvatarId = 2, Nickname = "AAA" });
+			AvatarsList.Add(new Avatar() { AvatarId = 3, Nickname = "AAA" });
 		}
 
 

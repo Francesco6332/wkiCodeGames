@@ -1,0 +1,49 @@
+.avatar-form{
+    position: relative;
+    background-color:mediumpurple;
+    top: 200px;
+    left: 700px;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    margin: 30px;
+    height: 500px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    border-radius: 60px;
+}
+
+.points-container{
+  position: relative;
+  background-color: teal;
+  left: 1700px;
+  margin: 30px;
+  height:200px;
+  width:200px;
+}
+
+.label-points{
+  text-decoration-color: white;
+}
+
+input{
+  height: 30px;
+  border-radius: 10px;
+}
+
+.avatar-choice{
+ width:50px;
+ height:50px;
+ color:white;
+}
+
+.avatar-ico{
+  transform: scale(2);
+}
+
+.team-ico, .add-team-ico{
+  margin-right:10px;
+}

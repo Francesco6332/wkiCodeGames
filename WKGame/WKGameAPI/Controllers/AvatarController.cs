@@ -26,6 +26,14 @@ namespace WKGameAPI.Controllers
 		{
 			return repo.GetAvatar(id);
 		}
+		
+		[HttpGet("/getAvatar/{id:int}")]
+		public Avatar SetAvatar(Avatar avatar)
+		{
+			AvatarRepository repo = new AvatarRepository();
+			//return repo.GetAvatar(id);
+			return new Avatar();
+		}
 
 		[HttpGet("/getAvatarScore/{id:int}")]
 		public double GetAvatarScore(int id)
