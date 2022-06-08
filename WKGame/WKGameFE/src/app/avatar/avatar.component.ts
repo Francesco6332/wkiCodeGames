@@ -24,7 +24,7 @@ export class AvatarComponent implements OnInit {
 }
 
 interface Avatar {
-  AvatarId: number;
+  AvatarId: number;    //Readonly
   Nickname: string;
   AvatarImage: string;
   CurrentScore: number; //Readonly

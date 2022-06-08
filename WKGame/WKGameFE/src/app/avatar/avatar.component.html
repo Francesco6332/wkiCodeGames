@@ -1,25 +1,38 @@
-<div class="avatar-form">
-  <button mat-button class="avatar-choice">
-    <mat-icon class="avatar-ico">person</mat-icon>
-  </button>
-  <mat-form-field appearance="fill">
-    <mat-label>Fill form field</mat-label>
-    <input matInput placeholder="Name your Astroman">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-  <button mat-button class="have-a-team">
-    <mat-icon class="team-ico">group</mat-icon>
-    <span>Already in a team? Join your team</span>
-  </button>
-  <button mat-button class="not-in-a-team">
-    <mat-icon class="add-team-ico">group_add</mat-icon>
-    <span>Create your team!</span>
-  </button>
-</div>
-<div class="points-container">
-  <span class="label-points"><h2>Points:</h2></span>
-  <div class="points">
-    <h4>250</h4>
+<div class="content">
+  <div class="py-5 text-center text-white" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto col-md-12">
+          <h1 class="mb-3 font-weight-bold">Astroman</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 p-4">
+        </div>
+        <div class="col-lg-4 col-md-6 p-4"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle" src="../../assets/avatars/Astronauta1.png" alt="Card image cap" width="200">
+          <h4> <b>Livello 1</b> </h4>
+          <p class="mb-0">80 punti guadagnati</p>
+        </div>
+        <div class="col-lg-4 p-4">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <form class="">
+            <div class="form-group"> <label class="font-weight-bold">Città</label> <input type="text" class="form-control" placeholder="dove vivi?" value="Milano"> </div>
+            <div class="form-group"> <label class="font-weight-bold">Ruolo</label> <input type="text" class="form-control" placeholder="quale ruolo hai?" value="Titolare della ditta"> </div>
+            <div class="form-group"> <label class="font-weight-bold">Dipartimento</label> <input type="text" class="form-control" placeholder="in che settore aziendale lavori?" value="TAA"> </div>
+            <div class="form-group"> <label class="font-weight-bold">Hobbies</label> <textarea type="text" class="form-control" value="TAA" rows="5" placeholder="descrivi cosa fai nel tempo libero"></textarea>
+              <small class="form-text text-muted">Il testo inserito sarà valutato da un meccansimo di riconoscimento testuale.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Salva</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
