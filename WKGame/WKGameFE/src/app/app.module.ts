@@ -28,6 +28,7 @@ import { SolarSystemComponent } from './solar-system/solar-system.component';
     RestTableComponent,
     WebcamSchreenshotComponent,
     SideNavBarComponent,
+    SolarSystemComponent,
   ],
   imports: [
     AppRoutingModule,
