@@ -21,7 +21,6 @@ import { DataService } from './rest-table/data.service';
 import { WebcamSchreenshotComponent } from './webcam-schreenshot/webcam-schreenshot.component';
 import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +28,7 @@ import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
     MapComponent,
     RestTableComponent,
     WebcamSchreenshotComponent,
-    SideNavBarComponent
+    SideNavBarComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -39,7 +38,7 @@ import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
     MatButtonModule,
     MatTooltipModule,
     MatProgressBarModule,
-    MatSidenavModule
+    MatSidenavModule,
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
