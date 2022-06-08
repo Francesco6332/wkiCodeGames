@@ -36,6 +36,10 @@ export class SolarSystemComponent implements OnInit, AfterViewInit {
   // Creo e inizializzo la mappa con Leaflet
   private map: any;
   private initMap(): void {
+    
+    if (this.map !== undefined && this.map !== null) {
+      this.map.remove(); 
+    }
 
     // Esempio con mappa custom
     this.map = L.map('map', {
@@ -99,24 +103,19 @@ export class SolarSystemComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
   }
 
-  goToTable() {
-    this.router.navigate(['/table']);
+  goToDetination(dest: string) {
+    this.router.navigate([`/${dest}`]);
   }
-
-  addScore(value: string) {
-    alert(value);
-    this.refreshMarker();
-  }
-
+  
   refreshMarker() {
-    this.manageMarker(this.mercuryMark, 0, 30, () => this.addScore('mercury'));
-    this.manageMarker(this.venusMark, 30, 60, () => this.addScore('venus'));
-    this.manageMarker(this.earthMark, 40, 70, () => this.addScore('earth'));
-    this.manageMarker(this.marsMark, 70, 100, () => this.addScore('mars'));
-    this.manageMarker(this.jupiterMark, 70, 100, () => this.addScore('jupiter'));
-    this.manageMarker(this.saturnMark, 70, 100, () => this.addScore('saturn'));
-    this.manageMarker(this.uranusMark, 70, 100, () => this.addScore('uranus'));
-    this.manageMarker(this.neptuneMark, 70, 100, () => this.addScore('neptune'));
+    this.manageMarker(this.mercuryMark, 0, 30,    () => this.goToDetination('mercury'));
+    this.manageMarker(this.venusMark, 30, 60,     () => this.goToDetination('venus'));
+    this.manageMarker(this.earthMark, 40, 70,     () => this.goToDetination('earth'));
+    this.manageMarker(this.marsMark, 70, 100,     () => this.goToDetination('mars'));
+    this.manageMarker(this.jupiterMark, 70, 100,  () => this.goToDetination('jupiter'));
+    this.manageMarker(this.saturnMark, 70, 100,   () => this.goToDetination('saturn'));
+    this.manageMarker(this.uranusMark, 70, 100,   () => this.goToDetination('uranus'));
+    this.manageMarker(this.neptuneMark, 70, 100,  () => this.goToDetination('neptune'));
   }
 
   // Ad ogni modifica dello score cambio il marker

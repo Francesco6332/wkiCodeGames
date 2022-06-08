@@ -22,6 +22,8 @@ import { WebcamSchreenshotComponent } from './webcam-schreenshot/webcam-schreens
 import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
 import { AvatarComponent } from './avatar/avatar.component';
 import { SolarSystemComponent } from './solar-system/solar-system.component';
+import { MercuryMapComponent } from './planets/mercury-map/mercury-map.component';
+import { VenusMapComponent } from './planets/venus-map/venus-map.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { SolarSystemComponent } from './solar-system/solar-system.component';
     SideNavBarComponent,
     AvatarComponent,
     SolarSystemComponent,
+    MercuryMapComponent,
+    VenusMapComponent,
   ],
   imports: [
     AppRoutingModule,
