@@ -15,22 +15,22 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { HeaderComponent } from './header/header.component';
-import { MapComponent } from './map/map.component';
 import { RestTableComponent } from './rest-table/rest-table.component';
 import { DataService } from './rest-table/data.service';
 import { WebcamSchreenshotComponent } from './webcam-schreenshot/webcam-schreenshot.component';
 import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
 import { AvatarComponent } from './avatar/avatar.component';
+import { SolarSystemComponent } from './solar-system/solar-system.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MapComponent,
     RestTableComponent,
     WebcamSchreenshotComponent,
     SideNavBarComponent,
     AvatarComponent,
+    SolarSystemComponent,
   ],
   imports: [
     AppRoutingModule,
