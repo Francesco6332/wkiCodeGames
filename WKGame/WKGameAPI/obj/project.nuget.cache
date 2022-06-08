@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CTj20aXs7bBm/xIh8QYsBOU0mNeqriW2tCNnyQxrk3yNgfDTGI2CXk2z1XHOu+n2nUX5ti7sjs1dAulzd4o/rQ==",
+  "dgSpecHash": "oEBBFvSV0n9eQCKliy0RGzDOwuZhteKcrRnYmoEv2ImVRiVCbpWsD5aQQSfl2TRlOEzcIwNRi7+HP5s7yzYr4w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Luigi.Piras\\Source\\Repos\\wkiCodeGames\\WKGame\\WKGameAPI\\WKGameAPI.csproj",
+  "projectFilePath": "C:\\Users\\Luigi.Piras\\source\\repos\\wkiCodeGames\\WKGame\\WKGameAPI\\WKGameAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luigi.Piras\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Luigi.Piras\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

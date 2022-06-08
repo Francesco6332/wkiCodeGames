@@ -25,6 +25,14 @@ namespace WKGameAPI.Controllers
 			AvatarRepository repo = new AvatarRepository();
 			return repo.GetAvatar(id);
 		}
+		
+		[HttpGet("/getAvatar/{id:int}")]
+		public Avatar SetAvatar(Avatar avatar)
+		{
+			AvatarRepository repo = new AvatarRepository();
+			//return repo.GetAvatar(id);
+			return new Avatar();
+		}
 
 		/// <summary>
 		/// restituisce i team del giocatore
