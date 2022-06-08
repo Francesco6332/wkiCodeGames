@@ -16,9 +16,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 import { HeaderComponent } from './header/header.component';
-import { RestTableComponent } from './rest-table/rest-table.component';
-import { DataService } from './rest-table/data.service';
-import { WebcamSchreenshotComponent } from './webcam-schreenshot/webcam-schreenshot.component';
 import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
 import { AvatarComponent } from './avatar/avatar.component';
 import { SolarSystemComponent } from './solar-system/solar-system.component';
@@ -29,8 +26,6 @@ import { VenusMapComponent } from './planets/venus-map/venus-map.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    RestTableComponent,
-    WebcamSchreenshotComponent,
     SideNavBarComponent,
     AvatarComponent,
     SolarSystemComponent,
@@ -48,7 +43,7 @@ import { VenusMapComponent } from './planets/venus-map/venus-map.component';
     MatSidenavModule,
     MatFormFieldModule
   ],
-  providers: [DataService, {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

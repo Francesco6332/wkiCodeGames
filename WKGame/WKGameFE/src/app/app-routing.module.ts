@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AvatarComponent } from './avatar/avatar.component';
 import { MercuryMapComponent } from './planets/mercury-map/mercury-map.component';
 import { VenusMapComponent } from './planets/venus-map/venus-map.component';
-import { RestTableComponent } from './rest-table/rest-table.component'
 import { SolarSystemComponent } from './solar-system/solar-system.component';
 
 const routes: Routes = [
@@ -11,7 +10,6 @@ const routes: Routes = [
   { path: 'home', component: SolarSystemComponent },
   { path: 'mercury', component: MercuryMapComponent },
   { path: 'venus', component: VenusMapComponent },
-  { path: 'table', component: RestTableComponent },
   { path: 'avatar', component: AvatarComponent}
 ];
 
