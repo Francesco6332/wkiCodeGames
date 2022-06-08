@@ -21,7 +21,6 @@ import { WebcamSchreenshotComponent } from './webcam-schreenshot/webcam-schreens
 import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
 import { SolarSystemComponent } from './solar-system/solar-system.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +28,6 @@ import { SolarSystemComponent } from './solar-system/solar-system.component';
     RestTableComponent,
     WebcamSchreenshotComponent,
     SideNavBarComponent,
-    SolarSystemComponent
   ],
   imports: [
     AppRoutingModule,
@@ -39,7 +37,7 @@ import { SolarSystemComponent } from './solar-system/solar-system.component';
     MatButtonModule,
     MatTooltipModule,
     MatProgressBarModule,
-    MatSidenavModule
+    MatSidenavModule,
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
