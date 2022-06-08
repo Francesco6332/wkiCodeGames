@@ -20,6 +20,7 @@ import { RestTableComponent } from './rest-table/rest-table.component';
 import { DataService } from './rest-table/data.service';
 import { WebcamSchreenshotComponent } from './webcam-schreenshot/webcam-schreenshot.component';
 import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
+import { AvatarComponent } from './avatar/avatar.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
     RestTableComponent,
     WebcamSchreenshotComponent,
     SideNavBarComponent,
+    AvatarComponent,
   ],
   imports: [
     AppRoutingModule,
