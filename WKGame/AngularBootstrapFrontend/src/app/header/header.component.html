@@ -1,0 +1,15 @@
+<nav class="navbar" [class.mat-elevation-z8]=true>
+    <button *ngIf="showLoginButton" 
+            mat-fab color="primary"             
+            matTooltip="Esegui il login per iniziare"
+            routerLink="/">
+       <mat-icon>account_circle</mat-icon>
+     </button>
+
+     <button mat-fab color="primary"
+            routerLink="/">
+       <mat-icon>home</mat-icon>
+     </button>
+ </nav>
+
+ 

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +7,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
 
-  constructor(http: HttpClient) {
+  title = 'Welcome to Middle Earth';
 
+  constructor() {
   }
-
-  title = 'WKGame';
+  
 }
