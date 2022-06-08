@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\AngularBackend",
-    "\\WKGame"
+    "\\WKGame",
+    "\\WKGame\\WKGameAPI",
+    "\\WKGame\\WKGameAPI\\Controllers",
+    "\\WKGame\\WKGameBackend"
   ],
-  "SelectedNode": "\\WKGame\\WKGame.sln",
+  "SelectedNode": "\\WKGame\\WKGameBackend\\WKGameBackend.csproj",
   "PreviewInSolutionExplorer": false
 }
