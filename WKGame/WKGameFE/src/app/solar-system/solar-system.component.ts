@@ -8,7 +8,7 @@ const maxBarValue = 0;
 
 // Codice per forzare l'utilizzo del marker
 const defaultIconUrl = 'assets/maps/icons/rocketman.png';
-const disabledIconUrl = 'assets/maps/icons/rocket.png';
+const disabledIconUrl = 'assets/maps/icons/flagdisabled_lightgray.png';
 const passedIconUrl = 'assets/maps/icons/flag.png';
 
 var defaultIcon  = createCustomIcon(defaultIconUrl, 15, 50);

@@ -7,7 +7,7 @@ namespace WKGameAPI.Models
 {
 	public class AvatarRepository : IAvatarRepository
 	{
-		private List<Avatar> _avatarsList;
+		private List<Avatar> _avatarsList = new List<Avatar>();
 		public List<Avatar> AvatarsList
 		{
 			get
@@ -39,10 +39,10 @@ namespace WKGameAPI.Models
 			};
 
 		}
+
 		public Avatar GetAvatar(int avatarId)
 		{
 			return AvatarsList.Where(x => x.AvatarId == avatarId).FirstOrDefault();
-
 		}
 
 		public IEnumerable<Avatar> GetAvatars()
