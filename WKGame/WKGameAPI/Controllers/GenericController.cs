@@ -24,6 +24,11 @@ namespace WKGameAPI.Controllers
 			return  new Random().Next();
 		}
 
+		public String GetTeams(String nickname)
+		{
+			return "";
+		}
+
 		[HttpGet("/getTestString")]
 		public String GetTestString()
 		{

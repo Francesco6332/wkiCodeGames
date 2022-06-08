@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marco.gentilozzi\\source\\repos\\wkiCodeGames-definitive\\WKGame\\WKGameAPI\\WKGameAPI.csproj": {}
+    "C:\\Users\\Luigi.Piras\\Source\\Repos\\wkiCodeGames\\WKGame\\WKGameAPI\\WKGameAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marco.gentilozzi\\source\\repos\\wkiCodeGames-definitive\\WKGame\\WKGameAPI\\WKGameAPI.csproj": {
+    "C:\\Users\\Luigi.Piras\\Source\\Repos\\wkiCodeGames\\WKGame\\WKGameAPI\\WKGameAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marco.gentilozzi\\source\\repos\\wkiCodeGames-definitive\\WKGame\\WKGameAPI\\WKGameAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Luigi.Piras\\Source\\Repos\\wkiCodeGames\\WKGame\\WKGameAPI\\WKGameAPI.csproj",
         "projectName": "WKGameAPI",
-        "projectPath": "C:\\Users\\marco.gentilozzi\\source\\repos\\wkiCodeGames-definitive\\WKGame\\WKGameAPI\\WKGameAPI.csproj",
-        "packagesPath": "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marco.gentilozzi\\source\\repos\\wkiCodeGames-definitive\\WKGame\\WKGameAPI\\obj\\",
+        "projectPath": "C:\\Users\\Luigi.Piras\\Source\\Repos\\wkiCodeGames\\WKGame\\WKGameAPI\\WKGameAPI.csproj",
+        "packagesPath": "C:\\Users\\Luigi.Piras\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Luigi.Piras\\Source\\Repos\\wkiCodeGames\\WKGame\\WKGameAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\marco.gentilozzi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Luigi.Piras\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }
