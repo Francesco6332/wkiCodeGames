@@ -4,8 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import * as L from 'leaflet';
 import { environment } from 'src/environments/environment';
 
-const maxBarValue = 0;
-
 // Codice per forzare l'utilizzo del marker
 const surveyUrl   = 'assets/maps/icons/survey.png';
 const feedbackUrl = 'assets/maps/icons/feedback.png';
