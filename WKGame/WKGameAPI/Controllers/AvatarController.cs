@@ -13,16 +13,17 @@ namespace WKGameAPI.Controllers
 	public class AvatarController : ControllerBase
 	{
 		private readonly ILogger<GenericController> _logger;
+		private AvatarRepository repo;
 
 		public AvatarController(ILogger<GenericController> logger)
 		{
 			_logger = logger;
+			repo = new AvatarRepository();
 		}
 
 		[HttpGet("/getAvatar/{id:int}")]
 		public Avatar GetAvatar(int id)
 		{
-			AvatarRepository repo = new AvatarRepository();
 			return repo.GetAvatar(id);
 		}
 		
@@ -34,20 +35,48 @@ namespace WKGameAPI.Controllers
 			return new Avatar();
 		}
 
+		[HttpGet("/getAvatarScore/{id:int}")]
+		public double GetAvatarScore(int id)
+		{
+			return repo.GetAvatar(id).CurrentScore;
+		}
+
+		[HttpGet("/getAvatarLevel/{id:int}")]
+		public double GetAvatarLevel(int id)
+		{
+			return repo.GetAvatar(id).CurrentLevel;
+		}
+
 		/// <summary>
 		/// restituisce i team del giocatore
 		/// </summary>
 		/// <param name="nickname"></param>
 		/// <returns></returns>
+		[HttpGet("/getTeams/{id:int}")]
 		public List<Team> GetTeams(String nickname)
 		{
 			throw new NotImplementedException();
 		}
 
-		[HttpGet("/getTestString")]
-		public String GetTestString()
+		[HttpPut("/setAvatarScore/{id:int}")]
+		public async Task<IActionResult> SetAvatarScore(int id, double score)
 		{
-			return "Hello world!";
+			try
+			{
+				var avatar = repo.GetAvatar(id);
+
+				if (avatar == null)
+					return NotFound();
+
+				avatar.CurrentScore = score;
+
+				return Ok();
+			}
+			catch (Exception)
+			{
+				return BadRequest();
+			}
 		}
+
 	}
 }
