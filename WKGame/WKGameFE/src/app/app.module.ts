@@ -23,6 +23,7 @@ import { MercuryMapComponent } from './planets/mercury-map/mercury-map.component
 import { VenusMapComponent } from './planets/venus-map/venus-map.component';
 import { FeedbackComponent } from './competitions/feedback/feedback.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatProgressBarModule,
     MatSidenavModule,
     MatFormFieldModule,
-    NgbModule,
+    NgbModule, 
+    FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
