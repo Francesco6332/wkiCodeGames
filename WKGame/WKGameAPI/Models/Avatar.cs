@@ -19,7 +19,7 @@ namespace WKGameAPI.Models
 		public String AvatarImage { get; set; }
 
 
-		public Double CurrentScore { get; set; }
+		public int CurrentScore { get; set; }
 
 		public int CurrentLevel { get; set; }
 

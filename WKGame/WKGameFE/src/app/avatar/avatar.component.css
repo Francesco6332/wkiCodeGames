@@ -1,67 +1,18 @@
-.avatar-form{
-    position: absolute;
-    background-color:mediumpurple;
-    top: 200px;
-    left: 700px;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    margin: 30px;
-    height: 500px;
-    width: 500px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    display: flex;
-    border-radius: 60px;
-}
-
-.points-container{
+.content {
   position: absolute;
-  left: 1700px;
-  margin: 30px;
-  height:200px;
-  width:180px;
-  bottom:0;
-  right:0;
-
-}
-
-.label-points{
-  color: white;
-  font-size:150%;
-  margin-left: 50px;
-  margin-top: 100px;
-}
-
-.number-points{
-  position: absolute;
-  color:white;
-  font-size:125%;
-  margin-right: 55px;
-  bottom: 0;
+  background-color: black;
+  top: 20px;
+  left: 220px;
   right: 0;
-}
-.points{
-  position:relative;
-  top: 50px;
-}
-
-input{
-  height: 30px;
-  border-radius: 10px;
+  bottom: 0;
+  z-index: 1;
+  margin: 10px 100px 0px 100px;
 }
 
-.avatar-choice{
- width:50px;
- height:50px;
- color:white;
+.form-group {
+  margin: 20px 0px 10px 0px;
 }
 
-.avatar-ico{
-  transform: scale(2);
-}
-
-.team-ico, .add-team-ico{
-  margin-right:10px;
+.font-weight-bold{
+  font-size: 18px;
 }

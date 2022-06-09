@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WebcamSchreenshotComponent } from './webcam-schreenshot.component';
+import { FeedbackComponent } from './feedback.component';
 
-describe('WebcamSchreenshotComponent', () => {
-  let component: WebcamSchreenshotComponent;
-  let fixture: ComponentFixture<WebcamSchreenshotComponent>;
+describe('FeedbackComponent', () => {
+  let component: FeedbackComponent;
+  let fixture: ComponentFixture<FeedbackComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WebcamSchreenshotComponent ]
+      declarations: [ FeedbackComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WebcamSchreenshotComponent);
+    fixture = TestBed.createComponent(FeedbackComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

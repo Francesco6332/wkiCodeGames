@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RestTableComponent } from './rest-table.component';
+import { MercuryMapComponent } from './mercury-map.component';
 
-describe('RestTableComponent', () => {
-  let component: RestTableComponent;
-  let fixture: ComponentFixture<RestTableComponent>;
+describe('MercuryMapComponent', () => {
+  let component: MercuryMapComponent;
+  let fixture: ComponentFixture<MercuryMapComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RestTableComponent ]
+      declarations: [ MercuryMapComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RestTableComponent);
+    fixture = TestBed.createComponent(MercuryMapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

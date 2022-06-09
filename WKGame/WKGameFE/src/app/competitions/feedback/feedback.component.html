@@ -1,0 +1,76 @@
+<div class="content">
+    <div class="container">
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
+            <div class="row">
+                <div class="col-md-12">
+                    <label class="question">{{question}}</label>
+                </div>
+            </div>
+            <span style="padding: 50px;"></span>
+
+            <!-- STARS -->
+            <div class="row spaced">
+                <div class="col-md-1">
+                    <span>TOTALE:</span>
+                </div>
+                <div class="col-md-4">
+                <ngb-rating [(rate)]="totalRate">
+                    <ng-template let-fill="fill" let-index="index">
+                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                      </ng-template>
+                </ngb-rating>
+                </div>
+            </div>
+            <div class="row spaced">
+                <div class="col-md-1">
+                    <span>Semplicità:</span>
+                </div>
+                <div class="col-md-4">
+                <ngb-rating [(rate)]="easyRate">
+                    <ng-template let-fill="fill" let-index="index">
+                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                      </ng-template>
+                </ngb-rating>
+                </div>
+            </div>
+            <div class="row spaced">
+                <div class="col-md-1">
+                    <span>Completezza:</span>
+                </div>
+                <div class="col-md-4">
+                <ngb-rating [(rate)]="completeRate">
+                    <ng-template let-fill="fill" let-index="index">
+                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                      </ng-template>
+                </ngb-rating>
+                </div>
+            </div>
+            <div class="row spaced">
+                <div class="col-md-1">
+                    <span>Utilità:</span>
+                </div>
+                <div class="col-md-4">
+                <ngb-rating [(rate)]="usefulRate">
+                    <ng-template let-fill="fill" let-index="index">
+                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                      </ng-template>
+                </ngb-rating>
+                </div>
+            </div>
+
+            <!-- FEEDBACK -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <textarea class="form-control" formControlName="feedbackText" rows="3"></textarea>
+                        <small class="form-text text-muted">Il testo inserito sarà valutato da un meccansimo di
+                            riconoscimento testuale.</small>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Invia</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
