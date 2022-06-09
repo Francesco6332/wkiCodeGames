@@ -14,7 +14,7 @@ namespace WKGameAPI.Models
 			set { _avatarsList = value; }
 		}
 
-		public List<Planet> _planetsList;
+		public List<Planet> _planetsList = new List<Planet>();
 		public List<Planet> PlanetsList
 		{
 			get { return _planetsList; }
