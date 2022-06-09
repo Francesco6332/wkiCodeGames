@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-side-nav-bar',
@@ -7,10 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideNavBarComponent implements OnInit {
 
-  public level: number = 1;
-  public score: number = 0;
+  public imgSrc: string = "../../assets/avatars/Astronauta1.png";
+  
+  public score$: Observable<Number>;
 
-  constructor() { }
+  constructor(http: HttpClient, public dataService: DataService) {
+    var result = dataService.getCyclicScore();
+    this.score$ = result[1];
+    result[0].subscribe((val) =>
+      this.imgSrc = `../../assets/avatars/Astronauta${val}.png`
+    )
+
+   }
 
   ngOnInit(): void {
   }

@@ -28,7 +28,7 @@ export class DataService implements OnDestroy {
 
 
   getCyclicScore(): [level: Observable<Number>, score: Observable<Number>] {
-    var level = this.score$.pipe(   
+    var level = this.level$.pipe(   
       tap(() => {})
     );
 

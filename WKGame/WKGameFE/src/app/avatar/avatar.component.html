@@ -9,9 +9,9 @@
       <div class="row">
         <div class="col-lg-4 col-md-6 p-4">
         </div>
-        <div class="col-lg-4 col-md-6 p-4"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle" src="../../assets/avatars/Astronauta1.png" alt="Card image cap" width="200">
-          <h4> <b>Livello 1</b> </h4>
-          <p class="mb-0">80 punti guadagnati</p>
+        <div class="col-lg-4 col-md-6 p-4"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle" src="{{imgSrc}}" alt="Card image cap" width="200">
+          <h4> <b>Livello {{avatar?.currentLevel}}</b> </h4>
+          <p class="mb-0">{{avatar?.currentScore}} punti guadagnati</p>
         </div>
         <div class="col-lg-4 p-4">
         </div>
@@ -23,14 +23,14 @@
       <div class="row">
         <div class="col-md-12">
           <form [formGroup]="form" (ngSubmit)="submitForm()">
-            <div class="form-group"> <label class="font-weight-bold">Clienti seguiti</label> <input type="text" class="form-control" formControlName="clienti_seguiti" placeholder="{{avatar?.FollowedCustomers}}" value="34"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Dimensione dell'azienda</label> <input type="text" class="form-control" formControlName="numero_dipendenti" placeholder="{{avatar?.CompanySize}}" value="1000"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Ore lavorate questa settimana</label> <input type="text" class="form-control"  formControlName="ore_lavorate" placeholder="{{avatar?.HoursWorkedWeekly}}" value="40"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Ore lavorate da remoto questa settimana</label> <input type="text" class="form-control" formControlName="ore_lavorate_remoto" placeholder="{{avatar?.HoursRemoteWorkedWeekly}}" value="20"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Città</label> <input type="text" class="form-control" formControleName="citta" placeholder="{{avatar?.City}}" value="Milano"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Ruolo</label> <input type="text" class="form-control" fromControlName="job_role" placeholder="{{avatar?.JobRole}}" value="Titolare della ditta"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Dipartimento</label> <input type="text" class="form-control" formControlName="job_department" placeholder="{{avatar?.JobDepartment}}" value="TAA"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Hobbies</label> <textarea type="text" class="form-control" value="TAA" rows="5" formControlName="hobbies" placeholder="{{avatar?.Hobbies}}"></textarea>
+            <div class="form-group"> <label class="font-weight-bold">Ruolo</label>                                   <input type="text"   class="form-control" formControlName="ruolo"                value="{{avatar?.jobRole}}"> </div>
+            <div class="form-group"> <label class="font-weight-bold">Dipartimento</label>                            <input type="text"   class="form-control" formControlName="job_department"       value="{{avatar?.jobDepartment}}"> </div>
+            <div class="form-group" *ngIf="showExtraFields"> <label class="font-weight-bold">Clienti seguiti</label>                         <input type="number" class="form-control" formControlName="clienti_seguiti"      value="{{avatar?.followedCustomers}}" > </div>
+            <div class="form-group" *ngIf="showExtraFields"> <label class="font-weight-bold">Dimensione dell'azienda</label>                 <input type="number" class="form-control" formControlName="numero_dipendenti"    value="{{avatar?.companySize}}" > </div>
+            <div class="form-group" *ngIf="showExtraFields"> <label class="font-weight-bold">Ore lavorate questa settimana</label>           <input type="number" class="form-control" formControlName="ore_lavorate"         value="{{avatar?.hoursWorkedWeekly}}" > </div>
+            <div class="form-group" *ngIf="showExtraFields"> <label class="font-weight-bold">Ore lavorate da remoto questa settimana</label> <input type="number" class="form-control" formControlName="ore_lavorate_remoto"  value="{{avatar?.hoursRemoteWorkedWeekly}}" > </div>
+            <div class="form-group"> <label class="font-weight-bold">Città</label>                                   <input type="text"   class="form-control" formControlName="citta"                value="{{avatar?.city}}"> </div>
+            <div class="form-group"> <label class="font-weight-bold">Hobbies</label>                                 <textarea type="text" class="form-control" rows="5" formControlName="hobbies"    value="{{avatar?.hobbies}}"></textarea>
               <small class="form-text text-muted">Il testo inserito sarà valutato da un meccansimo di riconoscimento testuale.</small>
             </div>
             <button type="submit" class="btn btn-primary">Salva</button>

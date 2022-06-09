@@ -1,7 +1,7 @@
 <mat-sidenav-container>
   <mat-sidenav opened [disableClose] = "true">
-    <div class="avatar-propic"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle" src="../../assets/avatars/Astronauta1.png" alt="Card image cap" width="200">
-      <p class="mb-0">80 punti guadagnati</p>
+    <div class="avatar-propic"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle" src="{{imgSrc}}" alt="Card image cap" width="200">
+      <p class="mb-0" *ngIf="score$ | async as score">{{score}} punti</p>
     </div>
     <button mat-button class="home-button" routerLink="/">
       <mat-icon>home</mat-icon>

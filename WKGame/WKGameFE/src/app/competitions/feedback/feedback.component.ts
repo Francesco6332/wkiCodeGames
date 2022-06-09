@@ -54,7 +54,7 @@ export class FeedbackComponent implements OnInit {
     this.http
       .post(`${environment.api_url}/feedback/sendFeedback`, feedback)
       .subscribe({
-        next: (response) => console.log(response),
+        next: (response) => alert("Abbiamo ricevuto il tuo feedback, Grazie!"),
         error: (error) => console.log(error),
       });
   }

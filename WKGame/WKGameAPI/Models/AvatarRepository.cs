@@ -30,12 +30,12 @@ namespace WKGameAPI.Models
 			AvatarsList.Add(new Avatar()
 			{
 				AvatarId = 1,
+				CurrentScore = 80,
 				Nickname = "Astroman",
 				AvatarImage = "",
 				City = "Milano",
-				CompanySize = 15,
-				JobRole = "",
-				CurrentScore = 50
+				JobRole = "Dipendente",
+				JobDepartment = "TAA",
 			});
 
 			AvatarsList.Add(new Avatar()
@@ -122,8 +122,9 @@ namespace WKGameAPI.Models
 				Nickname = "Astroman",
 				AvatarImage = "",
 				City = "Milano",
-				JobRole = "",
-				CompanySize = 15
+				JobRole = "Dipendente",
+				JobDepartment = "TAA",
+				CompanySize = 0
 			};
 
 		}

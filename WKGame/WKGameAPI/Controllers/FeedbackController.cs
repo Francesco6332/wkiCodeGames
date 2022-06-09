@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WKGameAPI.Factory;
 using WKGameAPI.Models;
 
 namespace WKGameAPI.Controllers
@@ -13,10 +14,12 @@ namespace WKGameAPI.Controllers
 	public class FeedbackController : ControllerBase
 	{
 		private readonly ILogger<GenericController> _logger;
+		private AvatarRepository repo;
 
 		public FeedbackController(ILogger<GenericController> logger)
 		{
 			_logger = logger;
+			repo = AvatarRepositoryFactory.GetAvatarRepository;
 		}
 
 		[HttpGet("/feedback/getQuestion/{level:int}")]
@@ -24,8 +27,8 @@ namespace WKGameAPI.Controllers
 		{
 			return level switch
 			{
-				1 => "Cosa ne pensi della nuova funzionalità Dismissioni dei cespiti di Genya?",
-				2 => "Cosa ne pensi del secondo livello?",
+				1 => "Dai una valutazione sul gestionale Genya",
+				2 => "Cosa ne pensi della nuova funzionalità Dismissioni dei cespiti di Genya?",
 				_ => "",
 			};
 		}
@@ -35,8 +38,19 @@ namespace WKGameAPI.Controllers
 		{
 			try
 			{
-				var fed = item;
+				//Conto le parole del feedback per assegnare i punti
+				char[] delimiters = new char[] { ' ', '\r', '\n' };
+				var wordCount = item.FeedbackText.Split(delimiters, StringSplitOptions.RemoveEmptyEntries).Length;
+
+				var avatar = repo.GetAvatar(item.UserId);
+
+				if (avatar == null)
+					return NotFound();
+
+				avatar.CurrentScore += wordCount;
+
 				return Ok();
+
 			}
 			catch (Exception)
 			{
