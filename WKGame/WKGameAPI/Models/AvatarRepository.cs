@@ -35,8 +35,7 @@ namespace WKGameAPI.Models
 				City = "Milano",
 				CompanySize = 15,
 				JobRole = "",
-				CurrentScore = 50,
-				CurrentLevel = 3
+				CurrentScore = 50
 			});
 
 			AvatarsList.Add(new Avatar()
@@ -47,8 +46,7 @@ namespace WKGameAPI.Models
 				City = "Torino",
 				CompanySize = 5,
 				JobRole = "",
-				CurrentScore = 10,
-				CurrentLevel = 1
+				CurrentScore = 110
 			});
 
 			#endregion
@@ -149,6 +147,24 @@ namespace WKGameAPI.Models
 			return false;
 		}
 
+		public bool UpdateAvatar(Avatar avatar)
+		{
+			var result = AvatarsList.Where(a => a.AvatarId == avatar.AvatarId).FirstOrDefault();
+			if (result != null)
+			{
+				result.CurrentScore            = avatar.CurrentScore;
+				result.JobRole                 = avatar.JobRole;
+				result.City                    = avatar.City;
+				result.CompanySize             = avatar.CompanySize;
+				result.JobDepartment           = avatar.JobDepartment;
+				result.FollowedCustomers       = avatar.FollowedCustomers;
+				result.HoursWorkedWeekly       = avatar.HoursWorkedWeekly;
+				result.HoursRemoteWorkedWeekly = avatar.HoursRemoteWorkedWeekly;
+				result.Hobbies                 = avatar.Hobbies;
+			}
+			return true;
+		}
+
 
 		public Double GetScore(int avatarId)
 		{
@@ -195,11 +211,6 @@ namespace WKGameAPI.Models
 			throw new NotImplementedException();
 		}
 
-		public Avatar UpdateAvatar(Avatar avatar)
-		{
-			throw new NotImplementedException();
-		}
-
 		public Avatar AddAvatar(Avatar avatar)
 		{
 			throw new NotImplementedException();
@@ -210,5 +221,9 @@ namespace WKGameAPI.Models
 			throw new NotImplementedException();
 		}
 
+		Avatar IAvatarRepository.UpdateAvatar(Avatar avatar)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

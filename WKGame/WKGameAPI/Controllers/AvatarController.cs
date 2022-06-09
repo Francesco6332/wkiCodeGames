@@ -35,13 +35,22 @@ namespace WKGameAPI.Controllers
 		}
 
 
-
-		[HttpPost("/setAvatar/{id:int}")]
-		public Avatar SetAvatar(Avatar avatar)
+		[HttpPost("/setAvatar/")]
+		public ActionResult<Feedback> SetAvatar(Avatar item)
 		{
-			AvatarRepository repo = new AvatarRepository();
-			//return repo.GetAvatar(id);
-			return new Avatar();
+			try
+			{
+				var avatarToUpdate = repo.UpdateAvatar(item);
+
+				if (avatarToUpdate)
+					return Ok();
+				else
+					return BadRequest();
+			}
+			catch (Exception)
+			{
+				return BadRequest();
+			}
 		}
 
 		[HttpGet("/getAvatarScore/{id:int}")]
@@ -85,28 +94,7 @@ namespace WKGameAPI.Controllers
 			{
 				return BadRequest();
 			}
-		}
-
-
-		[HttpPut("/setAvatarLevel/{id:int}/{level:int}")]
-		public async Task<IActionResult> SetAvatarLevel(int id, int level)
-		{
-			try
-			{
-				var avatar = repo.GetAvatar(id);
-
-				if (avatar == null)
-					return NotFound();
-
-				avatar.CurrentLevel = level;
-
-				return Ok();
-			}
-			catch (Exception)
-			{
-				return BadRequest();
-			}
-		}
+		}		
 
 	}
 }
