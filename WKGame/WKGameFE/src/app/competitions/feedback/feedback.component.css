@@ -1,0 +1,36 @@
+.content {
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: 20px;
+    left: 220px;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    margin: 10px 100px 0px 100px;
+  }
+
+  .form-group {
+    margin: 20px 0px 10px 0px;
+  }
+  
+  label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .question {
+    font-size: 24px;
+  }
+
+  .spaced{
+    padding-bottom: 10px;
+  }
+
+  .star {
+    font-size: 18px;
+    color: lightgoldenrodyellow;
+  }
+  .filled {
+    color: gold;
+  }

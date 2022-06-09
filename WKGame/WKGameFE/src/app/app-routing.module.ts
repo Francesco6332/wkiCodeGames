@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AvatarComponent } from './avatar/avatar.component';
+import { FeedbackComponent } from './competitions/feedback/feedback.component';
 import { MercuryMapComponent } from './planets/mercury-map/mercury-map.component';
 import { VenusMapComponent } from './planets/venus-map/venus-map.component';
 import { SolarSystemComponent } from './solar-system/solar-system.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
   { path: 'home', component: SolarSystemComponent },
   { path: 'mercury', component: MercuryMapComponent },
   { path: 'venus', component: VenusMapComponent },
-  { path: 'avatar', component: AvatarComponent}
+  { path: 'avatar', component: AvatarComponent}, 
+  { path: 'feedback', component: FeedbackComponent}, 
 ];
 
 @NgModule({
