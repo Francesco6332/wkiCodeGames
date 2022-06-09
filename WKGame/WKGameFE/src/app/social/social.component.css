@@ -1,5 +1,5 @@
-.content {
-  position: absolute;
+.container {
+  position: relative;
   background-color: black;
   top: 20px;
   left: 220px;
