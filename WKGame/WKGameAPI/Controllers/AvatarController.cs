@@ -27,7 +27,15 @@ namespace WKGameAPI.Controllers
 			return repo.GetAvatar(id);
 		}
 		
-		[HttpGet("/getAvatar/{id:int}")]
+		[HttpPost]
+		public bool SaveAvatar(Avatar avatar)
+		{
+			return repo.Save(avatar);
+		}
+
+
+
+		[HttpPost("/setAvatar/{id:int}")]
 		public Avatar SetAvatar(Avatar avatar)
 		{
 			AvatarRepository repo = new AvatarRepository();
@@ -50,16 +58,16 @@ namespace WKGameAPI.Controllers
 		/// <summary>
 		/// restituisce i team del giocatore
 		/// </summary>
-		/// <param name="nickname"></param>
+		/// <param name="id">id avatar</param>
 		/// <returns></returns>
 		[HttpGet("/getTeams/{id:int}")]
-		public List<Team> GetTeams(String nickname)
+		public List<Team> GetTeams(int id)
 		{
 			throw new NotImplementedException();
 		}
 
-		[HttpPut("/setAvatarScore/{id:int}")]
-		public async Task<IActionResult> SetAvatarScore(int id, double score)
+		[HttpPut("/setAvatarScore/{id:int}/{score:int}")]
+		public async Task<IActionResult> SetAvatarScore(int id, int score)
 		{
 			try
 			{
@@ -69,6 +77,27 @@ namespace WKGameAPI.Controllers
 					return NotFound();
 
 				avatar.CurrentScore = score;
+
+				return Ok();
+			}
+			catch (Exception)
+			{
+				return BadRequest();
+			}
+		}
+
+
+		[HttpPut("/setAvatarLevel/{id:int}/{level:int}")]
+		public async Task<IActionResult> SetAvatarLevel(int id, int level)
+		{
+			try
+			{
+				var avatar = repo.GetAvatar(id);
+
+				if (avatar == null)
+					return NotFound();
+
+				avatar.CurrentLevel = level;
 
 				return Ok();
 			}
