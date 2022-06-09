@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideNavBarComponent implements OnInit {
 
+  public level: number = 1;
+  public score: number = 0;
+
   constructor() { }
 
   ngOnInit(): void {
