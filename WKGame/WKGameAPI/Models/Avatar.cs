@@ -21,7 +21,7 @@ namespace WKGameAPI.Models
 
 		public int CurrentScore { get; set; }
 
-		public int CurrentLevel { get; set; }
+		public int CurrentLevel => (int)(this.CurrentScore / 100) + 1;
 
 		//public String Gender { get; set; }
 
