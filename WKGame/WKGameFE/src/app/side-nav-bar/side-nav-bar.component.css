@@ -29,7 +29,7 @@ span{
 }
 
 .home-button{
-  margin-top:150px;
+  margin-top:50px;
   padding: 20px;
 }
 
@@ -48,4 +48,15 @@ span{
 .invite-button{
   margin-bottom: 100px;
   padding:20px;
+}
+
+.mb-0{
+  color:white;
+  font-size: 16px;
+  text-align: center;
+}
+
+.img-fluid{
+  height: 100px;
+  width: 100px;
 }

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WKGameAPI.Factory;
 using WKGameAPI.Models;
 
 namespace WKGameAPI.Controllers
@@ -18,7 +19,7 @@ namespace WKGameAPI.Controllers
 		public AvatarController(ILogger<GenericController> logger)
 		{
 			_logger = logger;
-			repo = new AvatarRepository();
+			repo = AvatarRepositoryFactory.GetAvatarRepository;
 		}
 
 		[HttpGet("/getAvatar/{id:int}")]
