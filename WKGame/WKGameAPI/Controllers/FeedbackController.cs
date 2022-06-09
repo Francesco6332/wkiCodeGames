@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Azure.AI.TextAnalytics;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -49,13 +50,27 @@ namespace WKGameAPI.Controllers
 
 				avatar.CurrentScore += wordCount;
 
-				return Ok();
+				var analyzer = new TextAnalyzerController();
+
+				var feed = analyzer.Analyze(item.FeedbackText);
+
+				return Ok(getFeedResponse(feed));
 
 			}
 			catch (Exception)
 			{
 				return BadRequest();
 			}
+		}
+
+		private string getFeedResponse(TextSentiment feed)
+		{
+			return feed switch
+			{
+				TextSentiment.Positive => "Abbiamo ricevuto il tuo feedback e sembra che la funzione ti sia piaciuta! Ne siamo contenti!! Grazie ai vostri feedback miglioriamo insieme!!",
+				TextSentiment.Negative => "Sembra che la funzione non ti sia proprio piaciuta, se vuoi possiamo contattarti per aiutarti a risolvere i problemi migliorando insieme",
+				_ => "Abbiamo ricevuto il tuo feedback ma non abbiamo capito se la funzione ti è piaciuta o meno! Manda altri feedback per aiutarci nel migliorare ancora. Grazie!",
+			};
 		}
 	}
 }

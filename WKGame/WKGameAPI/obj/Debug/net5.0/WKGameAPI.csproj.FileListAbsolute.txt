@@ -56,3 +56,7 @@ C:\Users\Luigi.Piras\Source\Repos\wkiCodeGames\WKGame\WKGameAPI\obj\Debug\net5.0
 C:\Users\Luigi.Piras\Source\Repos\wkiCodeGames\WKGame\WKGameAPI\obj\Debug\net5.0\WKGameAPI.pdb
 C:\Users\Luigi.Piras\Source\Repos\wkiCodeGames\WKGame\WKGameAPI\obj\Debug\net5.0\WKGameAPI.genruntimeconfig.cache
 C:\Users\marco.gentilozzi\source\repos\wkiCodeGames-definitive\WKGame\WKGameAPI\bin\Debug\net5.0\WKGameAPI.StaticWebAssets.xml
+C:\Users\marco.gentilozzi\source\repos\wkiCodeGames-definitive\WKGame\WKGameAPI\bin\Debug\net5.0\Azure.AI.TextAnalytics.dll
+C:\Users\marco.gentilozzi\source\repos\wkiCodeGames-definitive\WKGame\WKGameAPI\bin\Debug\net5.0\Azure.Core.dll
+C:\Users\marco.gentilozzi\source\repos\wkiCodeGames-definitive\WKGame\WKGameAPI\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\marco.gentilozzi\source\repos\wkiCodeGames-definitive\WKGame\WKGameAPI\bin\Debug\net5.0\System.Memory.Data.dll

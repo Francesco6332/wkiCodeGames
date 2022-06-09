@@ -1,15 +1,26 @@
 {
   "version": 2,
-  "dgSpecHash": "CTj20aXs7bBm/xIh8QYsBOU0mNeqriW2tCNnyQxrk3yNgfDTGI2CXk2z1XHOu+n2nUX5ti7sjs1dAulzd4o/rQ==",
+  "dgSpecHash": "yFAQuu01zYiDgR6/iDIcWumU1SsceBDxQZYnk0leiwFO8KqjgQltg5N3CY+SREU8a319oOTD9uCeKHAL0OkJ7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Luigi.Piras\\Source\\Repos\\wkiCodeGames\\WKGame\\WKGameAPI\\WKGameAPI.csproj",
+  "projectFilePath": "C:\\Users\\marco.gentilozzi\\source\\repos\\wkiCodeGames-definitive\\WKGame\\WKGameAPI\\WKGameAPI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Luigi.Piras\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "C:\\Users\\Luigi.Piras\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\Luigi.Piras\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
-    "C:\\Users\\Luigi.Piras\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
-    "C:\\Users\\Luigi.Piras\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "C:\\Users\\Luigi.Piras\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\azure.ai.textanalytics\\5.1.1\\azure.ai.textanalytics.5.1.1.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\azure.core\\1.16.0\\azure.core.1.16.0.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.6.0\\system.diagnostics.diagnosticsource.4.6.0.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\system.text.json\\4.6.0\\system.text.json.4.6.0.nupkg.sha512",
+    "C:\\Users\\marco.gentilozzi\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512"
   ],
   "logs": []
 }

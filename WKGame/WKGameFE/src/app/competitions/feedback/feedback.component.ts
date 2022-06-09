@@ -52,9 +52,9 @@ export class FeedbackComponent implements OnInit {
     };
 
     this.http
-      .post(`${environment.api_url}/feedback/sendFeedback`, feedback)
+      .post(`${environment.api_url}/feedback/sendFeedback`, feedback, { responseType: 'text' })
       .subscribe({
-        next: (response) => alert("Abbiamo ricevuto il tuo feedback, Grazie!"),
+        next: (response) => alert(response),
         error: (error) => console.log(error),
       });
   }
