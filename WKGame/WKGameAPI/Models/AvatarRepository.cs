@@ -34,7 +34,7 @@ namespace WKGameAPI.Models
 				Nickname = "Astroman",
 				AvatarImage = "",
 				City = "Milano",
-				JobRole = "Dipendente",
+				JobRole = "Titolare di Studio",
 				JobDepartment = "TAA",
 			});
 
