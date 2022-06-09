@@ -1,0 +1,22 @@
+.content {
+  position: absolute;
+  background-color: black;
+  top: 20px;
+  left: 220px;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  margin: 10px 100px 0px 100px;
+}
+
+.carousel-indicators{
+  color: white;
+}
+
+body{
+  background-color: black;
+}
+
+.py-5{
+  color: black;
+}
