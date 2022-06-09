@@ -27,7 +27,7 @@ namespace WKGameAPI.Controllers
 		{
 			return level switch
 			{
-				1 => "Dai una valutazione sul gestionele Genya e Fattura Smart",
+				1 => "Dai una valutazione sul gestionale Genya",
 				2 => "Cosa ne pensi della nuova funzionalità Dismissioni dei cespiti di Genya?",
 				_ => "",
 			};
