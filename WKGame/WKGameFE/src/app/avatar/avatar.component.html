@@ -23,15 +23,14 @@
       <div class="row">
         <div class="col-md-12">
           <form [formGroup]="form" (ngSubmit)="submitForm()">
-            <div class="form-group"> <label class="font-weight-bold">Nickname</label> <input type="text" class="form-control" placeholder="Nickname" value="Astronauta_1"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Clienti seguiti</label> <input type="text" class="form-control" placeholder="Clienti seguiti" value="34"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Dimensione dell'azienda</label> <input type="text" class="form-control" placeholder="Numero dipendenti dell'azienda" value="1000"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Ore lavorate questa settimana</label> <input type="text" class="form-control" placeholder="Ore lavorate" value="40"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Ore lavorate da remoto questa settimana</label> <input type="text" class="form-control" placeholder="Ore da remoto" value="20"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Città</label> <input type="text" class="form-control" placeholder="dove vivi?" value="Milano"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Ruolo</label> <input type="text" class="form-control" placeholder="quale ruolo hai?" value="Titolare della ditta"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Dipartimento</label> <input type="text" class="form-control" placeholder="in che settore aziendale lavori?" value="TAA"> </div>
-            <div class="form-group"> <label class="font-weight-bold">Hobbies</label> <textarea type="text" class="form-control" value="TAA" rows="5" placeholder="descrivi cosa fai nel tempo libero"></textarea>
+            <div class="form-group"> <label class="font-weight-bold">Clienti seguiti</label> <input type="text" class="form-control" formControlName="clienti_seguiti" placeholder="{{avatar?.FollowedCustomers}}" value="34"> </div>
+            <div class="form-group"> <label class="font-weight-bold">Dimensione dell'azienda</label> <input type="text" class="form-control" formControlName="numero_dipendenti" placeholder="{{avatar?.CompanySize}}" value="1000"> </div>
+            <div class="form-group"> <label class="font-weight-bold">Ore lavorate questa settimana</label> <input type="text" class="form-control"  formControlName="ore_lavorate" placeholder="{{avatar?.HoursWorkedWeekly}}" value="40"> </div>
+            <div class="form-group"> <label class="font-weight-bold">Ore lavorate da remoto questa settimana</label> <input type="text" class="form-control" formControlName="ore_lavorate_remoto" placeholder="{{avatar?.HoursRemoteWorkedWeekly}}" value="20"> </div>
+            <div class="form-group"> <label class="font-weight-bold">Città</label> <input type="text" class="form-control" formControleName="citta" placeholder="{{avatar?.City}}" value="Milano"> </div>
+            <div class="form-group"> <label class="font-weight-bold">Ruolo</label> <input type="text" class="form-control" fromControlName="job_role" placeholder="{{avatar?.JobRole}}" value="Titolare della ditta"> </div>
+            <div class="form-group"> <label class="font-weight-bold">Dipartimento</label> <input type="text" class="form-control" formControlName="job_department" placeholder="{{avatar?.JobDepartment}}" value="TAA"> </div>
+            <div class="form-group"> <label class="font-weight-bold">Hobbies</label> <textarea type="text" class="form-control" value="TAA" rows="5" formControlName="hobbies" placeholder="{{avatar?.Hobbies}}"></textarea>
               <small class="form-text text-muted">Il testo inserito sarà valutato da un meccansimo di riconoscimento testuale.</small>
             </div>
             <button type="submit" class="btn btn-primary">Salva</button>

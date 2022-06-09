@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-avatar',
@@ -9,13 +10,26 @@ import { environment } from 'src/environments/environment';
 export class AvatarComponent implements OnInit {
 
   public avatar?: Avatar;
+  form: FormGroup;
 
-  constructor(http: HttpClient) {
+  constructor(private http: HttpClient, public fb: FormBuilder) {
     http.get<Avatar>(`${environment.api_url}/getAvatar/1`).subscribe(result => {
 
       this.avatar= result;
 
     }, error => console.error(error));
+
+    this.form = this.fb.group({
+      clienti_seguiti: [''],
+      numero_dipendenti: [''],
+      ore_lavorate: [''],
+      ore_lavorate_remoto: [''],
+      citta: [''],
+      job_role: [''],
+      hobbies: [''],
+      job_department: ['']
+    });
+
    }
 
   ngOnInit(): void {
@@ -29,18 +43,19 @@ export class AvatarComponent implements OnInit {
       AvatarImage     : this.avatar?.AvatarImage ?? "",
       CurrentScore      : this.avatar?.CurrentScore ?? 0,
       CurrentLevel  : this.avatar?.CurrentLevel ?? 0,
-      JobRole    : this.avatar?.JobRole ?? "",
-      FollowedCustomers   : this.avatar?.FollowedCustomers ?? 0,
-      City     : this.avatar?.City ?? "",
-      CompanySize     : this.avatar?.CompanySize ?? 0,
-      JobDepartment   : this.avatar?.JobDepartment ?? "",
-      HoursWorkedWeekly     : this.avatar?.HoursWorkedWeekly ?? 0,
-      HoursRemoteWorkedWeekly     : this.avatar?.HoursRemoteWorkedWeekly ?? 0,
-      Hobbies     : this.avatar?.Hobbies ?? [],
+      JobRole    : this.form.get('job_role')?.value ?? "",
+      FollowedCustomers   : this.form.get('clienti_seguiti')?.value ?? 0,
+      City     : this.form.get('citta')?.value ?? "",
+      CompanySize     : this.form.get('numero_dipendenti')?.value ?? 0,
+      JobDepartment   : this.form.get('job_department')?.value ?? "",
+      HoursWorkedWeekly     : this.form.get('ore_lavorate')?.value ?? 0,
+      HoursRemoteWorkedWeekly     : this.form.get('ore_lavorate_remoto')?.value ?? 0,
+      Hobbies     : this.form.get('hobbies')?.value ?? "",
+
   };
 
     this.http
-      .post(`${environment.api_url}/sendAvatar`, updateAvatar)
+      .post(`${environment.api_url}/setAvatar/${this.avatar?.AvatarId}`, updateAvatar)
       .subscribe({
         next: (response) => console.log(response),
         error: (error) => console.log(error),
