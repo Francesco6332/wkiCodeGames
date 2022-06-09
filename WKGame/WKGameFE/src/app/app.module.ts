@@ -24,6 +24,7 @@ import { VenusMapComponent } from './planets/venus-map/venus-map.component';
 import { FeedbackComponent } from './competitions/feedback/feedback.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NgbModule, 
     FormsModule, ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

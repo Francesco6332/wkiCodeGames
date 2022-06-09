@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
+import { DataService } from 'src/app/data.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -10,8 +11,8 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./feedback.component.css']
 })
 export class FeedbackComponent implements OnInit {
-  userlevel = 1;
-  userid = 1;
+  idAvatar = 1;
+  levelAvatar = 0;
 
   form: FormGroup;
 
@@ -22,18 +23,11 @@ export class FeedbackComponent implements OnInit {
   completeRate = 0;
   usefulRate = 0;
 
-  constructor(private http: HttpClient, config: NgbRatingConfig, public fb: FormBuilder) {
+  constructor(private http: HttpClient, config: NgbRatingConfig, public fb: FormBuilder, dataService: DataService) {
     // customize default values of ratings used by this component tree
     config.max = 5;
 
-    http.get(`${environment.api_url}/feedback/getQuestion/${this.userlevel}`, { responseType: 'text' }).subscribe({
-      next: res => {
-        this.question = res;
-      },
-      error: error => {
-        // handle error
-      }
-    });
+    this.getData();
 
     // Inizializzo i campi che tengono traccia della form
     this.form = this.fb.group({
@@ -48,20 +42,41 @@ export class FeedbackComponent implements OnInit {
   submitForm() {
 
     var feedback: Feedback = {
-      question      : this.question,
-      userId        : this.userid,
-      totalRate     : this.totalRate,
-      easyRate      : this.easyRate,
-      completeRate  : this.completeRate,
-      usefulRate    : this.usefulRate,
-      feedbackText  : this.form.get('feedbackText')?.value ?? ""
-  };
+      question: this.question,
+      userId: this.idAvatar,
+      totalRate: this.totalRate,
+      easyRate: this.easyRate,
+      completeRate: this.completeRate,
+      usefulRate: this.usefulRate,
+      feedbackText: this.form.get('feedbackText')?.value ?? ""
+    };
 
     this.http
       .post(`${environment.api_url}/feedback/sendFeedback`, feedback)
       .subscribe({
         next: (response) => console.log(response),
         error: (error) => console.log(error),
+      });
+  }
+
+  getData() {
+    this.http.get<number>(`${environment.api_url}/getAvatarLevel/${this.idAvatar}`).pipe()
+      .subscribe({
+        next: res => {
+          this.levelAvatar = res;
+          // Dopo aver caricato il livello, carico la domanda
+          this.http.get(`${environment.api_url}/feedback/getQuestion/${this.levelAvatar}`, { responseType: 'text' }).subscribe({
+            next: res => {
+              this.question = res;
+            },
+            error: error => {
+              console.log(error);
+            }
+          });
+        },
+        error: error => {
+          console.log(error);
+        }
       });
   }
 
