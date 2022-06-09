@@ -1,0 +1,19 @@
+.content {
+  position: absolute;
+  background-color: black;
+  top: 20px;
+  left: 220px;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  margin: 10px 100px 0px 100px;
+}
+
+#p1.img-fluid{
+  height: 500px;
+  width: 500px;
+}
+
+.mb-3{
+  color:white;
+}

@@ -25,6 +25,9 @@ import { FeedbackComponent } from './competitions/feedback/feedback.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataService } from './data.service';
+import { PrizeComponent } from './prize/prize.component';
+import { RankingComponent } from './ranking/ranking.component';
+import { SocialComponent } from './social/social.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { DataService } from './data.service';
     MercuryMapComponent,
     VenusMapComponent,
     FeedbackComponent,
+    PrizeComponent,
+    RankingComponent,
+    SocialComponent,
   ],
   imports: [
     AppRoutingModule,
