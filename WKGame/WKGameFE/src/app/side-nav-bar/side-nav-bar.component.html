@@ -1,0 +1,27 @@
+<mat-sidenav-container>
+  <mat-sidenav opened [disableClose] = "true">
+    <div class="avatar-propic"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle" src="{{imgSrc}}" alt="Card image cap" width="200">
+      <p class="mb-0" *ngIf="score$ | async as score">{{score}} punti</p>
+    </div>
+    <button mat-button class="home-button" routerLink="/">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <button mat-button class="avatar-button" routerLink="/avatar">
+      <mat-icon>person</mat-icon>
+      <span>Avatar</span>
+    </button>
+    <button mat-button class="rank-button" routerLink="/ranking">
+      <mat-icon>poll</mat-icon>
+      <span>Global rank</span>
+    </button>
+    <button mat-button class="prize-button" routerLink="/prize">
+      <mat-icon>card_giftcard</mat-icon>
+      <span>Prize list</span>
+    </button>
+    <button mat-button class="invite-button" routerLink="/social">
+      <mat-icon>share</mat-icon>
+      <span>Invite a friend</span>
+    </button>
+  </mat-sidenav>
+</mat-sidenav-container>
