@@ -122,7 +122,7 @@ namespace WKGameAPI.Controllers
 			if (res[0] == "More")
 				return result += "\nLa prossima assicurati che la webcam inquadri solo te per un'esperienza di gioco migliore";
 
-			return result+=$"\nOggi la tua faccia esprime un po' di {res[0]} ed anche un po' di {res[1]}";
+			return result+=$"\nOggi la tua faccia esprime {res[0]} ed anche un po' di {res[1]}";
 		}
 
 		private string getFeedResponse(TextSentiment feed)
