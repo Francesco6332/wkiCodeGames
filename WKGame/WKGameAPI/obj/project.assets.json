@@ -193,19 +193,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Luigi.Piras\\.nuget\\packages\\": {}
+    "C:\\Users\\francesco.furcillo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luigi.Piras\\Source\\Repos\\wkiCodeGames\\WKGame\\WKGameAPI\\WKGameAPI.csproj",
+      "projectUniqueName": "C:\\wkiCodeGames\\wkiCodeGames\\WKGame\\WKGameAPI\\WKGameAPI.csproj",
       "projectName": "WKGameAPI",
-      "projectPath": "C:\\Users\\Luigi.Piras\\Source\\Repos\\wkiCodeGames\\WKGame\\WKGameAPI\\WKGameAPI.csproj",
-      "packagesPath": "C:\\Users\\Luigi.Piras\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luigi.Piras\\Source\\Repos\\wkiCodeGames\\WKGame\\WKGameAPI\\obj\\",
+      "projectPath": "C:\\wkiCodeGames\\wkiCodeGames\\WKGame\\WKGameAPI\\WKGameAPI.csproj",
+      "packagesPath": "C:\\Users\\francesco.furcillo\\.nuget\\packages\\",
+      "outputPath": "C:\\wkiCodeGames\\wkiCodeGames\\WKGame\\WKGameAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Luigi.Piras\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\francesco.furcillo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -254,7 +259,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
