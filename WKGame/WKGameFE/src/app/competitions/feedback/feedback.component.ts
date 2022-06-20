@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 import { DataService } from 'src/app/data.service';
+import { WebcamSchreenshotComponent } from 'src/app/webcam-schreenshot/webcam-schreenshot.component';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -23,6 +24,9 @@ export class FeedbackComponent implements OnInit {
   completeRate = 0;
   usefulRate = 0;
 
+  @ViewChild(WebcamSchreenshotComponent)
+  private webcam!: WebcamSchreenshotComponent;
+
   constructor(private http: HttpClient, config: NgbRatingConfig, public fb: FormBuilder, dataService: DataService) {
     // customize default values of ratings used by this component tree
     config.max = 5;
@@ -39,7 +43,10 @@ export class FeedbackComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submitForm() {
+  async submitForm() {
+
+    // Faccio lo screenshot dalla webcam
+    await this.webcam.capture();
 
     var feedback: Feedback = {
       question: this.question,
@@ -52,9 +59,9 @@ export class FeedbackComponent implements OnInit {
     };
 
     this.http
-      .post(`${environment.api_url}/feedback/sendFeedback`, feedback)
+      .post(`${environment.api_url}/feedback/sendFeedback`, feedback, { responseType: 'text' })
       .subscribe({
-        next: (response) => alert("Abbiamo ricevuto il tuo feedback, Grazie!"),
+        next: (response) => alert(response),
         error: (error) => console.log(error),
       });
   }

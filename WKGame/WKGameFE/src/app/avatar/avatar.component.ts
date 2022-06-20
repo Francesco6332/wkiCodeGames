@@ -86,6 +86,19 @@ export class AvatarComponent implements OnInit {
       });
   }
 
+  resetScore()
+  {
+    let index = this.avatar?.avatarId ?? 1;
+    let valueToSend = 0; 
+
+    this.http
+      .put(`${environment.api_url}/setAvatarScore/${index}/${valueToSend}`, null)
+      .subscribe({
+        next: (response) => 
+            window.location.reload(),
+        error: (error) => console.log(error),
+      });
+  }
 
 
 }

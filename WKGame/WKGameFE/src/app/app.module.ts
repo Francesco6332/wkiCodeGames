@@ -28,6 +28,7 @@ import { DataService } from './data.service';
 import { PrizeComponent } from './prize/prize.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { SocialComponent } from './social/social.component';
+import { WebcamSchreenshotComponent } from './webcam-schreenshot/webcam-schreenshot.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { SocialComponent } from './social/social.component';
     PrizeComponent,
     RankingComponent,
     SocialComponent,
+    WebcamSchreenshotComponent,
   ],
   imports: [
     AppRoutingModule,

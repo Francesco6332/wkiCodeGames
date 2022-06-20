@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api_url: 'https://my-backend-api.azurewebsites.net/'
+  api_url: ' https://wkgame-backend.azurewebsites.net/'
 };

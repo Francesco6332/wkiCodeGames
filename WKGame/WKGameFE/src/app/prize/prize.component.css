@@ -27,8 +27,7 @@ h1{
 
 
 
-.carousel img{
-  transition: all 0.3s ease;
+.carousel {
   position: relative; }
 
 .carousel.pointer-event {

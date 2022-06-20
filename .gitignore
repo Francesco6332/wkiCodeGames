@@ -1,5 +1,10 @@
+.vs/
+.VSCodeCounter/
+.vscode/
+
 WKGame/.vs/
 WKGame/WKGameAPI/bin/
 WKGame/WKGameAPI/obj/
-WKGame/WKGameAPI/bin/*
-WKGame/WKGameAPI/obj/*
+WKGame/WKGameAPI/Resources/Images/
+WKGame/WKGameAPI/WKGameAPI.csproj.user
+WKGame/WKGameAPI/Properties/

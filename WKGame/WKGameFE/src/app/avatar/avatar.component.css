@@ -16,3 +16,7 @@
 .font-weight-bold{
   font-size: 18px;
 }
+
+.resetBtn{
+  float: right;
+}
